@@ -143,6 +143,33 @@ The current Figma prototype presents eight ordered mobile UI screens illustratin
 - **Clear terminology:** Practical feature names appear together with their RPG equivalents.
 - **Honest feedback:** Calculations, self-reports and example data are distinguished. The product makes no medical, diagnostic or therapeutic claims.
 
+### Worked Example: Before and After
+
+The prototype illustrates a student with 180 available minutes tonight and 300 minutes of planned work. Protected commitments are already excluded from the available time and are not counted twice.
+
+| Measure | Before adjustment | After the proposed adjustment |
+|---|---|---|
+| Available time tonight | 180 minutes | 180 minutes |
+| Planned work tonight | 300 minutes | 150 minutes |
+| Work exceeding available time | 120 minutes | 0 minutes |
+| Time available for optional recovery | 0 minutes | 30 minutes |
+| Protected commitments | Sleep minimum and family dinner | Remain protected |
+
+**Calculation:** Moving 90 minutes of reading and 60 minutes of Data Structures draft work removes 150 minutes from tonight’s plan. The remaining work is `300 − 150 = 150 minutes`, leaving `180 − 150 = 30 minutes` for recovery from **21:30 to 22:00**.
+
+### Where the Work Goes
+
+| Task portion | Proposed destination | Deadline check | Destination-capacity check |
+|---|---|---|---|
+| Reading — 90 minutes | Thursday, 20:00–21:30 | The reading deadline must be entered and checked against the proposed finish time. Until it is known, this adjustment remains Needs Review. | Thursday must have a continuous 90-minute slot after existing tasks and protected commitments are accounted for. If the slot is occupied, another valid time must be selected. |
+| Data Structures draft — 60 minutes | Saturday, 09:30–10:30 | This portion finishes before the displayed Sunday, 23:59 deadline. Any remaining assignment work must also fit before that deadline. | Saturday must have a continuous 60-minute slot without overlapping existing tasks or protected commitments. Otherwise, this destination cannot be accepted. |
+
+Moving work does not remove it. Before the proposed plan can be labelled feasible, the implementation must validate the destination dates, available capacity, deadlines and any remaining task portions. A shared commitment stays unchanged until the required agreement is recorded.
+
+If a destination is full, a deadline would be missed or information is missing, the proposal must remain **Needs Review** or return **No Feasible Plan**. Pending agreement does not count as freed time.
+
+This example demonstrates the intended scheduling benefit, not a measured reduction in stress. The protected recovery slot may remain unplanned, and completing an activity does not automatically lower Calamity.
+
 ### Selected UI Reference Screens
 
 #### 1. Optional Check-in / Status Appraisal
@@ -177,32 +204,6 @@ The current Figma prototype presents eight ordered mobile UI screens illustratin
 
 ![Journey Milestones screen](assets/journey-milestones.png)
 
-### Worked Example: Before and After
-
-The prototype illustrates a student with 180 available minutes tonight and 300 minutes of planned work. Protected commitments are already excluded from the available time and are not counted twice.
-
-| Measure | Before adjustment | After the proposed adjustment |
-|---|---|---|
-| Available time tonight | 180 minutes | 180 minutes |
-| Planned work tonight | 300 minutes | 150 minutes |
-| Work exceeding available time | 120 minutes | 0 minutes |
-| Time available for optional recovery | 0 minutes | 30 minutes |
-| Protected commitments | Sleep minimum and family dinner | Remain protected |
-
-**Calculation:** Moving 90 minutes of reading and 60 minutes of Data Structures draft work removes 150 minutes from tonight’s plan. The remaining work is `300 − 150 = 150 minutes`, leaving `180 − 150 = 30 minutes` for recovery from **21:30 to 22:00**.
-
-### Where the Work Goes
-
-| Task portion | Proposed destination | Deadline check | Destination-capacity check |
-|---|---|---|---|
-| Reading — 90 minutes | Thursday, 20:00–21:30 | The reading deadline must be entered and checked against the proposed finish time. Until it is known, this adjustment remains Needs Review. | Thursday must have a continuous 90-minute slot after existing tasks and protected commitments are accounted for. If the slot is occupied, another valid time must be selected. |
-| Data Structures draft — 60 minutes | Saturday, 09:30–10:30 | This portion finishes before the displayed Sunday, 23:59 deadline. Any remaining assignment work must also fit before that deadline. | Saturday must have a continuous 60-minute slot without overlapping existing tasks or protected commitments. Otherwise, this destination cannot be accepted. |
-
-Moving work does not remove it. Before the proposed plan can be labelled feasible, the implementation must validate the destination dates, available capacity, deadlines and any remaining task portions. A shared commitment stays unchanged until the required agreement is recorded.
-
-If a destination is full, a deadline would be missed or information is missing, the proposal must remain **Needs Review** or return **No Feasible Plan**. Pending agreement does not count as freed time.
-
-This example demonstrates the intended scheduling benefit, not a measured reduction in stress. The protected recovery slot may remain unplanned, and completing an activity does not automatically lower Calamity.
 
 ## 4. What Makes It Different
 
