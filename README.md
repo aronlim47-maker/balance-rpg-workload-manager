@@ -82,7 +82,7 @@ The notes propose keeping daily input short, including the previous night's slee
 
 ##### Draft version
 
-![Original hand-drawn mind map](assets/draft-mind-map.jpg)
+![Original hand-drawn mind map](assets/draft-mind_map.jpg)
 
 ##### Final version
 
@@ -94,7 +94,7 @@ The final mind map connects student workload conflicts to the **Detect → Decid
 
 ##### Draft version
 
-![Original hand-drawn problem tree](assets/draft-problem-tree.jpg)
+![Original hand-drawn problem tree](assets/draft-problem_tree.jpg)
 
 ##### Final version
 
