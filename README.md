@@ -317,8 +317,6 @@ The initial target is **RM0 in additional service spending**, conditional on exi
 
 If time is limited, we will prioritise one complete Detect → Decide → Recover journey. Cloud persistence and automated weekly reporting will follow after the core flow is reliable.
 
-### Out of Scope for This Build
-
 ### Reach and Scalability
 
 **Initial pilot.** We plan to invite a small group of students from our university who balance coursework with part-time work, family responsibilities or group projects. A proposed first round of 5–8 volunteers will assess whether the prototype’s decisions are understandable. Recruitment and testing have not yet taken place.
@@ -330,6 +328,10 @@ Participants will be asked to identify protected commitments, explain the conseq
 **Technical growth.** The first implementation will use local example data. A later stage may add authentication and per-user storage through a repository adapter, with access controls tested before personal data is stored. Hosting and database usage will be monitored before expanding access.
 
 Expansion will depend on a reliable core flow, clear user understanding and affordable operation. Live calendar integration and other external services will remain deferred until their value and maintenance costs are understood.
+
+Machine learning, burnout diagnosis or prediction, therapy claims, automatic messages to lecturers or teammates, live calendar integration, push notifications, social comparison, multiplayer systems, combat mechanics and an equipment economy are outside this build.
+
+### Out of Scope for This Build
 
 Machine learning, burnout diagnosis or prediction, therapy claims, automatic messages to lecturers or teammates, live calendar integration, push notifications, social comparison, multiplayer systems, combat mechanics and an equipment economy are outside this build.
 
