@@ -14,7 +14,7 @@ University students often manage assignments, examinations, part-time shifts, fa
 
 Students may recognise that they are overloaded but still cannot answer three practical questions: **What must remain protected? What can be adjusted? What consequences will each adjustment create?** Moving one task may protect tonight's sleep while increasing tomorrow's workload, creating deadline risk or affecting teammates. Students are the primary stakeholders; secondary stakeholders include teammates, family members, club members and university support services affected by or supporting the student's decisions.
 
-Existing products address parts of the problem. Todoist supports task organisation, replanning, collaboration and progress tracking, while Finch provides self-care features. Balance focuses on a specific combination: protected commitments, destination-day capacity, agreement requirements and recovery time within one plan-comparison flow.
+Existing solutions address parts of this problem. Todoist supports task organisation, replanning and collaboration, while Finch supports self-care goals and gamified engagement. Balance explores how protected commitments, adjustment consequences, agreement requirements and recovery time can work together in one workload decision flow. A detailed comparison appears in Section 4.
 
 ### Our Solution
 
@@ -78,6 +78,10 @@ The notes explore showing the effects of completing tasks, protecting work and f
 The notes propose keeping daily input short, including the previous night's sleep duration, setting a daily task limit and moving work to a suitable day within its deadline. They recognise cases requiring user input and question what happens if a student rejects a suggested schedule change.
 
 **Connection to the current design:** Changes require confirmation; rejection preserves the current plan; missing information remains **Unknown** or **Needs Review**; and pending agreement does not count as freed time. The prototype does not claim a clinically valid stress score.
+
+#### Design Evolution 
+
+![Idea design evolution](assets/Design-Evolution.jpg)
 
 #### Mindmap
 
@@ -183,6 +187,17 @@ The current Figma prototype presents eight ordered mobile UI screens illustratin
 | Honest Uncertainty | Missing information becomes **Needs Review**; shared changes become **Needs Agreement**; impossible constraints return **No Feasible Plan**. |
 | Light RPG Framing | Every RPG label is paired with a practical name. Milestones reward sustainable decisions without leaderboards, streak penalties or Game Over states. |
 
+### Comparison with Existing Solutions
+We reviewed official feature descriptions from Todoist and Finch to identify where Balance could add value.
+
+
+| Existing solution | Documented capabilities| Balance’s proposed distinction |
+|---|---|---|
+| Todoist | Task priorities, schedule replanning, shared projects, task assignments and productivity tracking. | Balance proposes a guided comparison that checks protected commitments, destination-day capacity and agreement requirements before a schedule change is confirmed. |
+| Finch | Self-care goals, daily Quests, Streaks and weekly milestones for self-care areas. | Balance connects optional recovery to time actually released by a workload decision. A recovery slot may remain unplanned, and activity completion does not automatically imply improved energy. |
+
+
+ 
 ## 5. Technical Architecture & Feasibility
 
 ### Tech Stack
