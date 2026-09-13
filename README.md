@@ -230,11 +230,21 @@ A valid confirmation stores the previous plan, applies the selected changes and 
 
 #### Workload model and data boundaries
 
-The time-capacity gap is calculated as:
+Workload Model and Data Boundaries
 
-`max(0, planned task minutes − available minutes)`
+Time-capacity calculation. Balance defines the scheduling gap as:
 
-Other workload dimensions use labelled self-reports; missing input remains **Unknown**. The prototype uses illustrative historical data. The accumulation and update rules for the Debt-based Workload Model still require definition and validation before a working cumulative score is claimed. Scheduling or completing a recovery activity does not automatically lower workload or demonstrate improved energy.
+Overload minutes = max(0, planned task minutes − available minutes)
+
+Available minutes exclude fixed commitments and protected time. Commitments already excluded from availability must not be counted again as planned tasks. For example, 300 minutes of planned work within 180 available minutes creates a 120-minute gap.
+
+Debt-based Workload Model. The proposed model represents workload pressure that can carry across days rather than automatically resetting each morning. The prototype illustrates this concept using example data. Its accumulation, carry-over and update rules have not yet been validated, so Calamity is not presented as a measured stress score or a medical assessment. Mental, Physical, Social and Errands use labelled self-reports; missing information remains Unknown.
+
+Moving a task changes when its workload is scheduled; it does not remove that workload. Likewise, reserving or completing a recovery activity does not automatically reduce Calamity. Protected recovery time, activity completion and self-reported energy are recorded separately.
+
+Planned decision rules. Before confirming a plan, the implementation will check task duration, deadlines, destination-day capacity, protected commitments and agreement status. Missing information returns Needs Review; an unapproved shared-task change remains Needs Agreement; and a plan that cannot satisfy the constraints returns No Feasible Plan. These rules are specified in the design but are not yet executed by the static prototype.
+
+Validation plan. We will test the scheduling rules using normal, overloaded, missing-information and pending-agreement scenarios. Student walkthroughs will assess whether users understand the proposed changes and their consequences. The cumulative workload model will require separate evaluation against repeated self-reports before its scores are used to guide decisions.
 
 ### System Architecture
 
