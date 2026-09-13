@@ -107,8 +107,8 @@ The problem tree links overlapping responsibilities, incomplete task information
 
 | Date | Mentor |Mentor feedback | What changed |
 |---|---|---|---|
-| 6 Sep 2026 | Lim Zi Yang | Develop a distinctive response beyond reproducing the problem statement. Consider privacy and security, and avoid relying on AI for the team’s original brainstorming. | Added protected commitments and consequence-aware trade-offs; removed peer comparison; made self-reporting optional; limited the prototype to rule-based example data and avoided medical claims. |
-| 8 Sep 2026 | Lim Zi Yang | Define a specific use case, examine existing stress and workload apps, and decide how wellbeing and gamification support that use case. | Defined the 3-hours-available versus 5-hours-planned scenario. Recovery now appears only after real capacity is freed, while RPG labels support the planning flow. |
+| 6 Sep 2026 | Lim Zi Yang | Develop a distinctive response beyond reproducing the problem statement. Consider multi-device use, privacy and security, and avoid relying on AI for the team's original brainstorming. | Added protected commitments and consequence-aware trade-offs; removed peer comparison; made self-reporting optional; limited the prototype to rule-based example data and avoided medical claims. |
+| 8 Sep 2026 | Lim Zi Yang | Define a specific use case, examine existing stress and workload apps, and decide how physical or mental wellbeing and gamification support that use case. | Defined the 3-hours-available versus 5-hours-planned scenario. Recovery now appears only after real capacity is freed, while RPG labels support the planning flow. |
 | 11 Sep 2026 | Lim Zi Yang | Reconsider how group meetings are changed. Address retention, progress reflection, expanded Sanctuary support and game elements. | Added **Needs Agreement** for shared commitments; Journey as a private weekly reflection; sustainable planning achievements; and broader optional Sanctuary activities. |
 
 ## 3. Design & Prototype
@@ -122,7 +122,7 @@ The current Figma prototype presents eight ordered mobile UI screens illustratin
 | Step | Practical feature / RPG label | Intended interaction |
 |---|---|---|
 | 1 | Optional Check-in / Status Appraisal | The student may record current energy and rest information. These optional readings inform the status view but do not automatically change the schedule. |
-| 2 | Workload Overview / World Status | The interface compares 3 available hours with 5 planned hours and states the 2-hour capacity gap. |
+| 2 | Workload Overview / World Status | The interface compares 3 available hours with 5 planned hours, states the 2-hour capacity gap, and displays Mental, Time, Physical, Social and Errands separately. |
 | 3 | Commitment Map / Quest Board | Protected sleep and family commitments are separated from fixed and flexible tasks. |
 | 4 | Plan Comparison / War Council | The student compares proposed adjustments and their consequences before confirming a plan. |
 | 5 | Confirmed Plan / Plan Updated | The interface shows what moved, what stayed protected and the time opened. Undo remains available. |
