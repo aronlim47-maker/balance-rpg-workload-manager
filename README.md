@@ -196,6 +196,11 @@ We reviewed official feature descriptions from Todoist and Finch to identify whe
 | Todoist | Task priorities, schedule replanning, shared projects, task assignments and productivity tracking. | Balance proposes a guided comparison that checks protected commitments, destination-day capacity and agreement requirements before a schedule change is confirmed. |
 | Finch | Self-care goals, daily Quests, Streaks and weekly milestones for self-care areas. | Balance connects optional recovery to time actually released by a workload decision. A recovery slot may remain unplanned, and activity completion does not automatically imply improved energy. |
 
+Sources: Todoist official features and Finch official features.
+Our differentiation is the combined decision flow. For a student with three available hours and five hours of work, Balance is designed to identify what must stay protected, explain which changes are possible, check their consequences, and reserve any remaining time for optional recovery. A shared commitment awaiting agreement does not count as freed time.
+
+RPG labels and achievements support this flow; they are not claimed as independently original features. Balance’s proposed milestones focus on sustainable planning, such as protecting sleep and addressing conflicts early.
+This comparison reflects the official pages reviewed, rather than exhaustive product testing. It does not establish that competitors cannot support similar workflows. Balance currently demonstrates the proposed approach through static prototype screens; its decision rules and user benefits still require implementation and validation.
 
  
 ## 5. Technical Architecture & Feasibility
