@@ -292,7 +292,7 @@ The current deliverable is a static Figma prototype. The following estimates des
 
 **Time estimate.** The core implementation is estimated at 36–52 person-hours. If four members each contribute four focused hours per day, this represents approximately three to four working days, including time for dependent tasks and integration. The estimate assumes sufficient familiarity with the chosen frontend tools; learning time must be added where needed.
 
-**Team capability.** Before development, we will assign responsibilities according to demonstrated skills:
+**Team capability.** Before development, Current Prototype Responsibilities
 
 | Team member | Assigned responsibility |
 |---|---|
