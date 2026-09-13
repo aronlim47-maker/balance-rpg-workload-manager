@@ -129,7 +129,7 @@ The current Figma prototype presents eight ordered mobile UI screens illustratin
 | 2 | Workload Overview / World Status | The interface compares 3 available hours with 5 planned hours, states the 2-hour capacity gap, and displays Mental, Time, Physical, Social and Errands separately. |
 | 3 | Commitment Map / Quest Board | Protected sleep and family commitments are separated from fixed and flexible tasks. |
 | 4 | Plan Comparison / War Council | The student compares proposed adjustments and their consequences before confirming a plan. |
-| 5 | Confirmed Plan / Plan Updated | The interface shows what moved, what stayed protected and the time opened. Undo remains available. |
+| 5 | Confirmed Plan / Plan Updated | The interface shows what moved, what stayed protected and the time opened. The screen illustrates the intended Undo action; working undo is planned for implementation. |
 | 6 | Recovery Nudge / Sanctuary | The corrected scenario leaves 30 minutes after moving 150 minutes of tasks. The student can reserve this time or leave it unplanned. |
 | 7 | Weekly Summary / Journey | A private weekly view presents workload patterns, protected recovery time and sleep protection. |
 | 8 | Planning Achievements / Journey Milestones | Milestones recognise sustainable planning without streak penalties or peer rankings. |
