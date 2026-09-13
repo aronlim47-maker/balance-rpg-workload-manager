@@ -284,7 +284,7 @@ The current deliverable is a static Figma prototype. The following estimates des
 |---|---|---|---|---|
 | Foundation | Responsive app shell, navigation and reusable UI components. | Lim Ze Heng | 4–6 person-hours | Core |
 | Detect | Task entry, availability, protected commitments and overload calculation. | Lim Ze Heng | 6–8 person-hours | Core |
-| Decide | Plan comparison, constraint checks, agreement states, confirmation and undo. | Lim Ze Heng| 10–14 person-hours | Core |
+| Decide | Plan comparison, constraint checks, agreement states, confirmation and undo. | Matthew| 10–14 person-hours | Core |
 | Recover | Reserve available recovery time and offer optional Sanctuary activities. | Tan Yi Ming | 4–6 person-hours | Core |
 | Reflect | Weekly summaries and sustainable milestones using recorded local actions. | Tan Yi Ming | 4–6 person-hours | Core |
 | Integration and validation | Check the complete scenario, edge cases, navigation and data consistency. | All members; lead: Lim Ze Heng | 8–12 person-hours | Core |
