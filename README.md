@@ -329,7 +329,6 @@ Participants will be asked to identify protected commitments, explain the conseq
 
 Expansion will depend on a reliable core flow, clear user understanding and affordable operation. Live calendar integration and other external services will remain deferred until their value and maintenance costs are understood.
 
-Machine learning, burnout diagnosis or prediction, therapy claims, automatic messages to lecturers or teammates, live calendar integration, push notifications, social comparison, multiplayer systems, combat mechanics and an equipment economy are outside this build.
 
 ### Out of Scope for This Build
 
