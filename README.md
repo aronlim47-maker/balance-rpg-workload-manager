@@ -230,8 +230,6 @@ A valid confirmation stores the previous plan, applies the selected changes and 
 
 #### Workload model and data boundaries
 
-Workload Model and Data Boundaries
-
 Time-capacity calculation. Balance defines the scheduling gap as:
 
 Overload minutes = max(0, planned task minutes − available minutes)
