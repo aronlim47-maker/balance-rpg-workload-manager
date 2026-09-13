@@ -53,9 +53,10 @@ Once a confirmed plan creates genuine free time, Balance helps the student prote
 
 These three original handwritten pages record early problem framing, proposed solutions and unresolved questions in Chinese. The English summaries below describe the legible content rather than provide a word-for-word transcription. They document design exploration, not user interview findings or validated outcomes.
 
-![Early ideation sketches](assets/early-sketches.png)
 
 ##### Early draft A — Practical constraints and continued use
+
+![Early draft A](assets/early-draft-a.png)
 
 The notes consider why students may not continue using an app and explore gamification, daily tasks and a sense of achievement. They also raise privacy and security concerns. A key observation is that stress can arise from necessary commitments, including assignments and part-time work: the system cannot assume every task can be reduced.
 
@@ -63,11 +64,15 @@ The notes consider why students may not continue using an app and explore gamifi
 
 ##### Early draft B — Proposed responses to student needs
 
+![Early draft B](assets/early-draft-b.jpg)
+
 The notes explore showing the effects of completing tasks, protecting work and family time, providing personalised suggestions based on available time and stressful tasks, and strengthening security. They acknowledge academic and financial pressures that may be difficult for the app to resolve.
 
 **Connection to the current design:** Fixed and protected commitments, capacity checks and plan comparison make these proposals more specific. The current scope focuses on workload decisions and does not claim to resolve financial or academic pressures themselves.
 
 ##### Early draft C — Scheduling rules and unresolved questions
+
+![Early draft C](assets/early-draft-c.jpg)
 
 The notes propose keeping daily input short, including the previous night's sleep duration, setting a daily task limit and moving work to a suitable day within its deadline. They recognise cases requiring user input and question what happens if a student rejects a suggested schedule change.
 
