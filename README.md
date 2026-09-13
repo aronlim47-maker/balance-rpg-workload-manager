@@ -177,6 +177,33 @@ The current Figma prototype presents eight ordered mobile UI screens illustratin
 
 ![Journey Milestones screen](assets/journey-milestones.png)
 
+### Worked Example: Before and After
+
+The prototype illustrates a student with 180 available minutes tonight and 300 minutes of planned work. Protected commitments are already excluded from the available time and are not counted twice.
+
+| Measure | Before adjustment | After the proposed adjustment |
+|---|---|---|
+| Available time tonight | 180 minutes | 180 minutes |
+| Planned work tonight | 300 minutes | 150 minutes |
+| Work exceeding available time | 120 minutes | 0 minutes |
+| Time available for optional recovery | 0 minutes | 30 minutes |
+| Protected commitments | Sleep minimum and family dinner | Remain protected |
+
+**Calculation:** Moving 90 minutes of reading and 60 minutes of Data Structures draft work removes 150 minutes from tonight’s plan. The remaining work is `300 − 150 = 150 minutes`, leaving `180 − 150 = 30 minutes` for recovery from **21:30 to 22:00**.
+
+### Where the Work Goes
+
+| Task portion | Proposed destination | Deadline check | Destination-capacity check |
+|---|---|---|---|
+| Reading — 90 minutes | Thursday, 20:00–21:30 | The reading deadline must be entered and checked against the proposed finish time. Until it is known, this adjustment remains Needs Review. | Thursday must have a continuous 90-minute slot after existing tasks and protected commitments are accounted for. If the slot is occupied, another valid time must be selected. |
+| Data Structures draft — 60 minutes | Saturday, 09:30–10:30 | This portion finishes before the displayed Sunday, 23:59 deadline. Any remaining assignment work must also fit before that deadline. | Saturday must have a continuous 60-minute slot without overlapping existing tasks or protected commitments. Otherwise, this destination cannot be accepted. |
+
+Moving work does not remove it. Before the proposed plan can be labelled feasible, the implementation must validate the destination dates, available capacity, deadlines and any remaining task portions. A shared commitment stays unchanged until the required agreement is recorded.
+
+If a destination is full, a deadline would be missed or information is missing, the proposal must remain **Needs Review** or return **No Feasible Plan**. Pending agreement does not count as freed time.
+
+This example demonstrates the intended scheduling benefit, not a measured reduction in stress. The protected recovery slot may remain unplanned, and completing an activity does not automatically lower Calamity.
+
 ## 4. What Makes It Different
 
 | Distinctive mechanism | Why it matters |
@@ -250,17 +277,58 @@ Validation plan. We will test the scheduling rules using normal, overloaded, mis
 
 ### Build Plan & Scope
 
-| Phase | Deliverable | Scope |
+The current deliverable is a static Figma prototype. The following estimates describe a proposed first implementation using seeded data and local browser state. They are planning estimates, not completed development hours.
+
+| Phase | Deliverable | Owner | Estimated effort | Scope |
+|---|---|---|---|---|
+| Foundation | Responsive app shell, navigation and reusable UI components. | Lim Ze Heng | 4–6 person-hours | Core |
+| Detect | Task entry, availability, protected commitments and overload calculation. | Lim Ze Heng | 6–8 person-hours | Core |
+| Decide | Plan comparison, constraint checks, agreement states, confirmation and undo. | Lim Ze Heng| 10–14 person-hours | Core |
+| Recover | Reserve available recovery time and offer optional Sanctuary activities. | Tan Yi Ming | 4–6 person-hours | Core |
+| Reflect | Weekly summaries and sustainable milestones using recorded local actions. | Tan Yi Ming | 4–6 person-hours | Core |
+| Integration and validation | Check the complete scenario, edge cases, navigation and data consistency. | All members; lead: Lim Ze Heng | 8–12 person-hours | Core |
+| Persistence | Authentication and per-user storage after the local flow is stable. | Chong Zhi Xuan | Separately estimated after core validation | Stretch |
+
+**Time estimate.** The core implementation is estimated at 36–52 person-hours. If four members each contribute four focused hours per day, this represents approximately three to four working days, including time for dependent tasks and integration. The estimate assumes sufficient familiarity with the chosen frontend tools; learning time must be added where needed.
+
+**Team capability.** Before development, we will assign responsibilities according to demonstrated skills:
+
+| Team member | Assigned responsibility |
+|---|---|
+| Lim Ze Heng | Plan and Idea Design |
+| Tan Yi Ming | Ui Design |
+| Chong Zhi Xuan | Testing |
+| Matthew Thien Yung En | Writing the Report |
+
+**Cost assumptions.**
+
+| Resource | Planned use | Budget assumption |
 |---|---|---|
-| 1. Foundation | Responsive app shell, navigation, shared components and consistent practical/RPG terminology. | Committed |
-| 2. Detect | Task entry, optional check-in, protected commitments, five load dimensions and the capacity-gap state. | Committed |
-| 3. Decide | Rule-based plan options, consequence summaries, Needs Review, Needs Agreement, No Feasible Plan, Confirm and Undo. | Committed |
-| 4. Recover | Reserve genuine free time and provide optional Sanctuary activities with Skip for Now. | Committed |
-| 5. Reflect | Journey weekly summary and non-repeatable sustainable planning milestones. | Committed |
-| 6. Validate and polish | Test the 3-hour versus 5-hour scenario for comprehension, navigation and consistency. | Committed |
-| 7. Persistence | Supabase authentication and per-user storage after the complete local flow works reliably. | Stretch |
+| Existing laptops and development tools | Local development and testing | No additional hardware purchase planned. |
+| Figma | Existing prototype and design reference | No additional paid subscription assumed for this build. |
+| GitHub | Source code, README and image assets | No paid repository features required by the planned scope. |
+| React, TypeScript and Tailwind CSS | Frontend implementation | No framework licence purchase planned. |
+| Vercel | Optional hosted demonstration | Use only if the available plan supports the intended use within its limits; otherwise demonstrate locally. |
+| Supabase | Stretch authentication and per-user storage | Deferred until core validation. Check current pricing and usage limits before adoption. |
+| AI APIs and external integrations | Not required by the core decision engine | No API spending included in the core budget. |
+
+The initial target is **RM0 in additional service spending**, conditional on existing access and applicable service limits. This excludes team labour, existing devices and internet access; it is not a guarantee of zero operating cost at larger scale.
+
+If time is limited, we will prioritise one complete Detect → Decide → Recover journey. Cloud persistence and automated weekly reporting will follow after the core flow is reliable.
 
 ### Out of Scope for This Build
+
+### Reach and Scalability
+
+**Initial pilot.** We plan to invite a small group of students from our university who balance coursework with part-time work, family responsibilities or group projects. A proposed first round of 5–8 volunteers will assess whether the prototype’s decisions are understandable. Recruitment and testing have not yet taken place.
+
+Participants will be asked to identify protected commitments, explain the consequences of a proposed adjustment, recognise a task requiring agreement, and locate the recovery time created by the plan. We will record task completion, misunderstandings and suggested improvements. This pilot will assess usability rather than establish long-term wellbeing benefits.
+
+**Wider reach.** After revising the flow, we plan to invite students from additional courses and student societies. Different schedules and responsibilities will help us examine whether the rules work beyond the initial example. Continued use will be evaluated separately, including whether users return to rebalance a later workload conflict.
+
+**Technical growth.** The first implementation will use local example data. A later stage may add authentication and per-user storage through a repository adapter, with access controls tested before personal data is stored. Hosting and database usage will be monitored before expanding access.
+
+Expansion will depend on a reliable core flow, clear user understanding and affordable operation. Live calendar integration and other external services will remain deferred until their value and maintenance costs are understood.
 
 Machine learning, burnout diagnosis or prediction, therapy claims, automatic messages to lecturers or teammates, live calendar integration, push notifications, social comparison, multiplayer systems, combat mechanics and an equipment economy are outside this build.
 
