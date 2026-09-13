@@ -105,11 +105,11 @@ The problem tree links overlapping responsibilities, incomplete task information
 
 ### 2.3 Mentor Consultation
 
-| Date | Mentor feedback | What changed |
-|---|---|---|
-| 6 Sep 2026 | Develop a distinctive response beyond reproducing the problem statement. Consider privacy and security, and avoid relying on AI for the team’s original brainstorming. | Added protected commitments and consequence-aware trade-offs; removed peer comparison; made self-reporting optional; limited the prototype to rule-based example data and avoided medical claims. |
-| 8 Sep 2026 | Define a specific use case, examine existing stress and workload apps, and decide how wellbeing and gamification support that use case. | Defined the 3-hours-available versus 5-hours-planned scenario. Recovery now appears only after real capacity is freed, while RPG labels support the planning flow. |
-| 11 Sep 2026 | Reconsider how group meetings are changed. Address retention, progress reflection, expanded Sanctuary support and game elements. | Added **Needs Agreement** for shared commitments; Journey as a private weekly reflection; sustainable planning achievements; and broader optional Sanctuary activities. |
+| Date | Mentor |Mentor feedback | What changed |
+|---|---|---|---|
+| 6 Sep 2026 | Lim Zi Yang | Develop a distinctive response beyond reproducing the problem statement. Consider privacy and security, and avoid relying on AI for the team’s original brainstorming. | Added protected commitments and consequence-aware trade-offs; removed peer comparison; made self-reporting optional; limited the prototype to rule-based example data and avoided medical claims. |
+| 8 Sep 2026 | Lim Zi Yang | Define a specific use case, examine existing stress and workload apps, and decide how wellbeing and gamification support that use case. | Defined the 3-hours-available versus 5-hours-planned scenario. Recovery now appears only after real capacity is freed, while RPG labels support the planning flow. |
+| 11 Sep 2026 | Lim Zi Yang | Reconsider how group meetings are changed. Address retention, progress reflection, expanded Sanctuary support and game elements. | Added **Needs Agreement** for shared commitments; Journey as a private weekly reflection; sustainable planning achievements; and broader optional Sanctuary activities. |
 
 ## 3. Design & Prototype
 
