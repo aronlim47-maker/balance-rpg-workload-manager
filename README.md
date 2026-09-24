@@ -44,7 +44,7 @@ Once a confirmed plan creates genuine free time, Balance helps the student prote
 | Debt-based Workload Model + Load Balancer + Recovery Nudge | Chosen | Connects cumulative workload detection, a concrete planning decision and protected recovery time. |
 | RPG framing | Refined and retained | Makes the experience memorable while keeping practical labels visible and avoiding a complex game economy. |
 | Journey and Sustainable Achievements | Added | Responds to mentor feedback on retention by rewarding safe planning and private reflection without streak pressure. |
-| Negotiation AI | Refined | Changed from generated external messages into user-confirmed plan comparison and a **Needs Agreement** state. |
+| Negotiation AI | Refined | Changed from generated external messages into user-confirmed plan comparison. Shared-commitment approval is deferred from the first release. |
 | Energy Currency | Dropped | Too difficult to explain credibly in a 3–5 minute demo and shifted attention toward a game economy. |
 | Peer Comparison | Dropped | Added privacy and multi-user complexity; comparison could also increase anxiety. |
 
@@ -113,7 +113,7 @@ The problem tree links overlapping responsibilities, incomplete task information
 |---|---|---|---|
 | 6 Sep 2026 | Lim Zi Yang | Develop a distinctive response beyond reproducing the problem statement. Consider multi-device use, privacy and security, and avoid relying on AI for the team's original brainstorming. | Added protected commitments and consequence-aware trade-offs; removed peer comparison; made self-reporting optional; limited the prototype to rule-based example data and avoided medical claims. |
 | 8 Sep 2026 | Lim Zi Yang | Define a specific use case, examine existing stress and workload apps, and decide how physical or mental wellbeing and gamification support that use case. | Defined the 3-hours-available versus 5-hours-planned scenario. Recovery now appears only after real capacity is freed, while RPG labels support the planning flow. |
-| 11 Sep 2026 | Lim Zi Yang | Reconsider how group meetings are changed. Address retention, progress reflection, expanded Sanctuary support and game elements. | Added **Needs Agreement** for shared commitments; Journey as a private weekly reflection; sustainable planning achievements; and broader optional Sanctuary activities. |
+| 11 Sep 2026 | Lim Zi Yang | Reconsider how group meetings are changed. Address retention, progress reflection, expanded Sanctuary support and game elements. | Added Journey as a private weekly reflection, sustainable planning achievements and broader optional Sanctuary activities. Shared-commitment approval is deferred from the first release. |
 
 ## 3. Design & Prototype
 
@@ -212,7 +212,7 @@ This example demonstrates the intended scheduling benefit, not a measured reduct
 | Non-negotiable Commitments | Students protect a shift, exam, family duty, shared task or sleep minimum. The plan cannot sacrifice these simply to appear successful. |
 | Consequence-aware Trade-offs | Balance previews what changes, what remains protected, destination-day capacity, deadline effects, rest effects and agreement needs before confirmation. |
 | Recovery Follows Real Capacity | Recovery appears only after a confirmed change creates time. Protected time, reported completion and self-reported energy remain separate. |
-| Honest Uncertainty | Missing information becomes **Needs Review**; shared changes become **Needs Agreement**; impossible constraints return **No Feasible Plan**. |
+| Honest Uncertainty | Missing information becomes **Needs Review**; impossible constraints return **No Feasible Plan**. Shared-commitment approval is a future extension. |
 | Light RPG Framing | Every RPG label is paired with a practical name. Milestones reward sustainable decisions without leaderboards, streak penalties or Game Over states. |
 
 ### Comparison with Existing Solutions
@@ -238,11 +238,11 @@ This comparison reflects the official pages reviewed, rather than exhaustive pro
 | Layer | Planned choice | Reason and constraint |
 |---|---|---|
 | Prototype | Figma static screen flow | Eight ordered reference screens illustrate intended states. |
-| Product frontend | Flutter + Dart | Supports a responsive mobile-first web interface with one codebase. |
-| Decision engine | Client-side rule-based checks | Checks duration, deadlines, destination capacity, protected commitments and agreement status without machine learning. |
-| MVP data | Seeded example data / in-memory browser state | Planned local demo state resets on refresh until persistence is implemented. |
+| Product frontend | Flutter and Dart | Builds an Android-first mobile application with one codebase. |
+| Decision engine | Client-side rule-based checks | Checks duration, deadlines, destination capacity and protected commitments without machine learning. |
+| MVP data | Seeded example data / local repository state | The local demo state resets when the application restarts until persistence is implemented. |
 | Stretch data and authentication | Supabase PostgreSQL and Supabase Auth | Adds per-user persistence after the interaction flow is stable. |
-| Hosting | Vercel | Provides a straightforward deployment path for the Flutter application. |
+| Delivery | Android APK | Supports a real-device demonstration and a distributable Android build. |
 
 ### Architecture Patterns
 
@@ -252,7 +252,7 @@ The architecture follows three SDA principles: **Separation of concerns**, **Dep
 
 #### Confirmation and undo behaviour
 
-The Confirm Plan use case revalidates durations, deadlines, destination-day capacity, protected commitments and agreement status. If required information is missing or a constraint fails, it returns **Needs Review**, **Needs Agreement** or **No Feasible Plan** without changing the schedule.
+The Confirm Plan use case revalidates durations, deadlines, destination-day capacity and protected commitments. If required information is missing or a constraint fails, it returns **Needs Review** or **No Feasible Plan** without changing the schedule. Shared-commitment approval is outside the first release.
 
 A valid confirmation stores the previous plan, applies the selected changes and updates the interface. Undo restores the previous task placements and recovery reservation together.
 
@@ -268,7 +268,7 @@ Debt-based Workload Model. The proposed model represents workload pressure that 
 
 Moving a task changes when its workload is scheduled; it does not remove that workload. Likewise, reserving or completing a recovery activity does not automatically reduce Calamity. Protected recovery time, activity completion and self-reported energy are recorded separately.
 
-Planned decision rules. Before confirming a plan, the implementation will check task duration, deadlines, destination-day capacity, protected commitments and agreement status. Missing information returns Needs Review; an unapproved shared-task change remains Needs Agreement; and a plan that cannot satisfy the constraints returns No Feasible Plan. These rules are specified in the design but are not yet executed by the static prototype.
+Planned decision rules. Before confirming a plan, the implementation will check task duration, deadlines, destination-day capacity and protected commitments. Missing information returns Needs Review, and a plan that cannot satisfy the constraints returns No Feasible Plan. Shared-commitment approval is outside the first release. These rules are specified in the design but are not yet executed by the static prototype.
 
 Validation plan. We will test the scheduling rules using normal, overloaded, missing-information and pending-agreement scenarios. Student walkthroughs will assess whether users understand the proposed changes and their consequences. The cumulative workload model will require separate evaluation against repeated self-reports before its scores are used to guide decisions.
 
@@ -308,7 +308,8 @@ The current deliverable is a static Figma prototype. The following estimates des
 | Existing laptops and development tools | Local development and testing | No additional hardware purchase planned. |
 | Figma | Existing prototype and design reference | No additional paid subscription assumed for this build. |
 | GitHub | Source code, README and image assets | No paid repository features required by the planned scope. |
-| Flutter + Dart | Frontend implementation | No framework licence purchase planned. |
+| Flutter and Dart | Android application implementation | No framework licence purchase planned. |
+| Android APK | Android device demonstration | Build and test the MVP on a real Android device. |
 | Supabase | Stretch authentication and per-user storage | Deferred until core validation. Check current pricing and usage limits before adoption. |
 | AI APIs and external integrations | Not required by the core decision engine | No API spending included in the core budget. |
 
@@ -331,7 +332,7 @@ Expansion will depend on a reliable core flow, clear user understanding and affo
 
 ### Out of Scope for This Build
 
-Machine learning, burnout diagnosis or prediction, therapy claims, automatic messages to lecturers or teammates, live calendar integration, push notifications, social comparison, multiplayer systems, combat mechanics and an equipment economy are outside this build.
+Machine learning, burnout diagnosis or prediction, therapy claims, automatic messages to lecturers or teammates, live calendar integration, push notifications, social comparison, multiplayer systems, shared-commitment approval, combat mechanics and an equipment economy are outside this build.
 
 ## References
 
