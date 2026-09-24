@@ -238,11 +238,11 @@ This comparison reflects the official pages reviewed, rather than exhaustive pro
 | Layer | Planned choice | Reason and constraint |
 |---|---|---|
 | Prototype | Figma static screen flow | Eight ordered reference screens illustrate intended states. |
-| Product frontend | React, TypeScript and Tailwind CSS | Supports a responsive mobile-first web interface with one codebase. |
+| Product frontend | Flutter + Dart | Supports a responsive mobile-first web interface with one codebase. |
 | Decision engine | Client-side rule-based checks | Checks duration, deadlines, destination capacity, protected commitments and agreement status without machine learning. |
 | MVP data | Seeded example data / in-memory browser state | Planned local demo state resets on refresh until persistence is implemented. |
 | Stretch data and authentication | Supabase PostgreSQL and Supabase Auth | Adds per-user persistence after the interaction flow is stable. |
-| Hosting | Vercel | Provides a straightforward deployment path for the React application. |
+| Hosting | Vercel | Provides a straightforward deployment path for the Flutter application. |
 
 ### Architecture Patterns
 
@@ -308,8 +308,7 @@ The current deliverable is a static Figma prototype. The following estimates des
 | Existing laptops and development tools | Local development and testing | No additional hardware purchase planned. |
 | Figma | Existing prototype and design reference | No additional paid subscription assumed for this build. |
 | GitHub | Source code, README and image assets | No paid repository features required by the planned scope. |
-| React, TypeScript and Tailwind CSS | Frontend implementation | No framework licence purchase planned. |
-| Vercel | Optional hosted demonstration | Use only if the available plan supports the intended use within its limits; otherwise demonstrate locally. |
+| Flutter + Dart | Frontend implementation | No framework licence purchase planned. |
 | Supabase | Stretch authentication and per-user storage | Deferred until core validation. Check current pricing and usage limits before adoption. |
 | AI APIs and external integrations | Not required by the core decision engine | No API spending included in the core budget. |
 
